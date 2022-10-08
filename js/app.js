@@ -140,19 +140,22 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   result = multiply(dynamicArray[0],result);
   for(let i = 1; i < dynamicArray.length; i++){
     result = multiply(dynamicArray[i],result[0]);
-    console.log(result);
-    // index 0 = 1, first = 1 * 1 ,
+    // index 0 = 1, result = 1 * 1 ,
+
     //      result[0]  (dynamicArray[1]
     //i = 1,   1      *       2, result = [2, message]
+
     //   (result[0])(dynamicArray[2]) [6, message]
     //i = 2,   2    *       3      = result
+
     //   (result[0])(dynamicArray[3]) [24, message]
     //i = 3,   6      *     4 =      result
+
     //   (result[0])(dynamicArray[4]) [120, message]
     //i = 4   24    *     5 =      result
   }
-  let message = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${result}.`;
-  //console.log(message);
+  console.log(result[0]);
+  let message = `The numbers ${dynamicArray.join()} have a product of ${result}.`;
   return [result[0], message];
 }
 
